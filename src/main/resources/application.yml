@@ -1,4 +1,4 @@
-#\u751F\u4EA7\u73AF\u5883\u8FD0\u7EF4\u652F\u6301\uFF0C\u8BBF\u95EEactuator/health\u5C55\u793A
+#生产环境运维支持，访问actuator/health展示
 info:
   app_name: Spring Boot Framework Application
   app_version: 1.0.0
