@@ -1,6 +1,5 @@
 package com.stt.springbootframework.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
@@ -13,7 +12,7 @@ public class User {
     private String password;
     private int age;
     private String sex;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
+    //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date birthday;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String desc;

@@ -4,12 +4,34 @@ info:
   app_version: 1.0.0
 
 spring:
+  # 配置i18n资源文件，供thymeleaf读取
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+  mvc:
+    #设定静态文件路径，js,css等
+    static-path-pattern: /static/**
   freemarker:
-    #关闭freemarker缓存, 即时刷新
+    #关闭freemarker缓存, 即时刷新，上线生产环境需要改为true
     cache: false
+    #设定ftl文件路径
+    template-loader-path: classpath:/templates
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    #在模板文件中可以这样使用var url='${request.contextPath}/public/save';
+    request-context-attribute: request
+    suffix: .ftl
   thymeleaf:
-    #关闭thymeleaf缓存, 即时刷新
+    #关闭thymeleaf缓存, 即时刷新，上线生产环境需要改为true
     cache: false
+    #thymeleaf和freemarker配置区别，结尾要加/
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
   devtools:
     restart:
       #热部署生效(生产环境关闭)
@@ -26,9 +48,6 @@ restart:
   include:
     mapper: /mapper-[\\w-\\.]+jar
     pagehelper: /pagehelper-[\\w-\\.]+jar
-
-
-
 
 
 

@@ -1,9 +1,12 @@
 package com.stt.springbootframework.controller;
 
 import com.stt.springbootframework.entity.JsonResult;
+import com.stt.springbootframework.entity.Resource;
 import com.stt.springbootframework.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,9 +18,11 @@ import java.util.List;
 public class HelloController {
 
     private static final Logger log = LoggerFactory.getLogger(HelloController.class);
+    @Autowired
+    Resource resource;
 
     @RequestMapping("/hello")
-    public JsonResult Hello(){
+    public JsonResult Hello() {
         List<User> users = new ArrayList<>();
         User user = new User();
         user.setId("1");
@@ -39,5 +44,12 @@ public class HelloController {
         users.add(user2);
         log.info("success");
         return JsonResult.ok(users);
+    }
+
+    @RequestMapping("/getResource")
+    public JsonResult getResource() {
+        Resource res = new Resource();
+        BeanUtils.copyProperties(resource, res);
+        return JsonResult.ok(res);
     }
 }
