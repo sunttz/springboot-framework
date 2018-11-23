@@ -2,14 +2,19 @@ package com.stt.springbootframework.controller;
 
 import com.stt.springbootframework.entity.JsonResult;
 import com.stt.springbootframework.entity.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RestController
 public class HelloController {
+
+    private static final Logger log = LoggerFactory.getLogger(HelloController.class);
 
     @RequestMapping("/hello")
     public JsonResult Hello(){
@@ -20,15 +25,19 @@ public class HelloController {
         user.setName("zhangsan");
         user.setPassword("123456");
         user.setSex("1");
+        user.setBirthday(new Date());
         users.add(user);
 
         User user2 = new User();
-        user2.setId("1");
+        user2.setId("3");
         user2.setAge(24);
         user2.setName("zhangsan");
         user2.setPassword("123456");
         user2.setSex("1");
+        user2.setBirthday(new Date());
+        user2.setDesc("desc");
         users.add(user2);
+        log.info("success");
         return JsonResult.ok(users);
     }
 }
