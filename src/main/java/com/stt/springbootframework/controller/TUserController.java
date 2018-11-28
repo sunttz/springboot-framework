@@ -1,6 +1,7 @@
 package com.stt.springbootframework.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.stt.springbootframework.entity.JsonResult;
 import com.stt.springbootframework.entity.TUser;
 import com.stt.springbootframework.service.TUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,16 @@ public class TUserController {
         t2.setPhone("911");
         tUserService.addTUser(t2);
         return "success";
+    }
+
+    @RequestMapping("/saveTUserTransactional")
+    public JsonResult saveTUserTransactional(){
+        TUser t1 = new TUser();
+        t1.setUsername("lisi2");
+        t1.setPassword("123");
+        t1.setPhone("110");
+        tUserService.saveTUserTransactional(t1);
+        return JsonResult.ok();
     }
 
     @RequestMapping("/findAll")
