@@ -3,7 +3,7 @@ package com.stt.springbootframework.dao;
 import com.stt.springbootframework.entity.TUser;
 
 import java.util.List;
-// extends MyMapper<TUser>
+// extends TkMapper<TUser>
 public interface TUserDao {
     int deleteByPrimaryKey(Integer userid);
 

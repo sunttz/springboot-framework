@@ -92,10 +92,16 @@ spring:
     # 连接超时时间（毫秒）
     timeout: 5000
 
-## mybatis设置
+#mybatis设置
 mybatis:
   mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
   type-aliases-package: com.stt.springbootframework.entity  # 注意：对应实体类的路径
+
+#通用Mapper设置
+mapper:
+  mappers: com.stt.springbootframework.utils.TkMapper
+  identity: MYSQL
+  not-empty: false
 
 #pagehelper
 pagehelper:

@@ -37,7 +37,6 @@ public class OneInterceptor implements HandlerInterceptor {
     public void postHandle(HttpServletRequest request, HttpServletResponse response,
                            Object object, ModelAndView mv)
             throws Exception {
-        // TODO Auto-generated method stub
 
     }
 
@@ -49,7 +48,6 @@ public class OneInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response,
                                 Object object, Exception ex)
             throws Exception {
-        // TODO Auto-generated method stub
 
     }
 

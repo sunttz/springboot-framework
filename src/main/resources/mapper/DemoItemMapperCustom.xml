@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.stt.springbootframework.dao.DemoItemCustomDao" >
+  <resultMap id="BaseResultMap" type="com.stt.springbootframework.entity.DemoItem">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="amount" jdbcType="INTEGER" property="amount" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, amount
+  </sql>
+  <select id="queryDemoItemByIdCustom" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from demo_item
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+</mapper>
