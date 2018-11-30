@@ -1,6 +1,7 @@
 # springboot-framework
 
 该项目包含功能如下：
+
 1、springboot热部署
 
 2、资源文件属性配置
