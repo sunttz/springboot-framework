@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 定时任务
+ */
 @Component
 public class TestTask {
 

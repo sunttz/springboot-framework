@@ -23,13 +23,13 @@ public class TwoInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object object) throws Exception {
 
-        if (true) {
-            returnErrorResponse(response, JsonResult.errorMsg("被two拦截..."));
-        }
+//        if (true) {
+//            returnErrorResponse(response, JsonResult.errorMsg("被two拦截..."));
+//        }
 
         System.out.println("被two拦截...");
 
-        return false;
+        return true;
     }
 
     /**

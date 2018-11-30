@@ -11,5 +11,4 @@ public interface TUserService {
 
     PageInfo<TUser> findAllUser(int pageNum, int pageSize);
 
-//    PageInfo<TUser> findUsersByUser(int pageNum, int pageSize, TUser tUser);
 }

@@ -49,21 +49,4 @@ public class TUserServiceImpl implements TUserService {
         PageInfo result = new PageInfo(tUsers);
         return result;
     }
-
-//    @Override
-//    public PageInfo<TUser> findUsersByUser(int pageNum, int pageSize, TUser tUser) {
-//        PageHelper.startPage(pageNum, pageSize);
-//        Example example = new Example(TUser.class);
-//        Example.Criteria criteria = example.createCriteria();
-//        if (!StringUtils.isEmptyOrWhitespace(tUser.getUsername())) {
-//            criteria.andLike("username", "%" + tUser.getUsername() + "%");
-//        }
-//        if (!StringUtils.isEmptyOrWhitespace(tUser.getPassword())) {
-//            criteria.andLike("password", "%" + tUser.getPassword() + "%");
-//        }
-//        example.orderBy("username").desc();
-//        List<TUser> tUsers = tUserDao.selectByExample(example);
-//        PageInfo result = new PageInfo(tUsers);
-//        return result;
-//    }
 }

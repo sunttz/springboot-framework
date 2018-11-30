@@ -29,8 +29,8 @@ import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;
 
 /**
- * 继承自己的TkMapper
- * <p>
+ * 通用Mapper
+ *
  * Mapper接口：基本的增、删、改、查方法
  * MySqlMapper：针对MySQL的额外补充接口，支持批量插入
  */

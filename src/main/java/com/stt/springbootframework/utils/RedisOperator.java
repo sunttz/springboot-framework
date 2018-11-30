@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class RedisOperator {
 
 //	@Autowired
-//    private RedisTemplate<String, Object> redisTemplate;
+//  private RedisTemplate<String, Object> redisTemplate;
 
     @Autowired
     private StringRedisTemplate redisTemplate;

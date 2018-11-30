@@ -14,6 +14,7 @@ public class User {
     private String sex;
     //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date birthday;
+    // 为null则不传
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String desc;
 
